@@ -9,17 +9,20 @@ A complete C++ chess game featuring both Terminal and Web GUI interfaces, full r
 * **Game Management:** Full support for `undo`, `redo`, `save`, `load`, and move timers.
 * **Algorithmic Optimizations:** Dynamic programming (transposition tables) and greedy move ordering for rapid move evaluation.
 
+```markdown
 ## System Architecture
 
-```text
-Chess Game
-├── Core C++ Backend
-│   ├── Board & Rules Engine
-│   ├── AI Engine (Minimax + Pruning)
-│   └── State & History Stack (FEN / Save File)
-└── Interfaces
-    ├── Terminal Interface (CLI)
-    └── Web GUI (Python Server + Browser UI)
+```mermaid
+graph TD
+    A[Chess Game System] --> B[Core C++ Backend]
+    A --> C[User Interfaces]
+
+    B --> B1[Board & Rules Engine]
+    B --> B2[AI Engine - Minimax / Pruning]
+    B --> B3[State Stack - FEN / save.dat]
+
+    C --> C1[Terminal Interface CLI]
+    C --> C2[Web GUI - Python + Browser]
 
 ## Setup & Compilation
 
