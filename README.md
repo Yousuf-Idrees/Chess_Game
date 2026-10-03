@@ -10,12 +10,16 @@ A complete C++ chess game featuring both Terminal and Web GUI interfaces, full r
 * **Algorithmic Optimizations:** Dynamic programming (transposition tables) and greedy move ordering for rapid move evaluation.
 
 ## System Architecture
+
+```text
 Chess Game
-├── Core C++ Backend (Board, Rules, AI Engine, State Management)
-├── Interfaces
-│   ├── Terminal Interface (CLI with Algebraic Notation)
-│   └── Web GUI (Python Server + Modern Browser Frontend)
-└── Data & History Stack (FEN String Serialization / Save File)
+├── Core C++ Backend
+│   ├── Board & Rules Engine
+│   ├── AI Engine (Minimax + Pruning)
+│   └── State & History Stack (FEN / Save File)
+└── Interfaces
+    ├── Terminal Interface (CLI)
+    └── Web GUI (Python Server + Browser UI)
 
 ## Setup & Compilation
 
