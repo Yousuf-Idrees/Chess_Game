@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wooden Chess Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="toast" class="toast hidden">Invalid Move!</div>
+    <div id="ai-overlay" class="overlay hidden"><h2>AI is thinking...</h2></div>
+    <div id="game-container">
+        <div id="board-area">
+            <div class="wooden-title">CHESS</div>
+            <div class="board-container">
+                <div id="board">
+                    <!-- Javascript will inject 64 squares here -->
+                </div>
+                <div class="coordinates letters">
+                    <span>A</span><span>B</span><span>C</span><span>D</span><span>E</span><span>F</span><span>G</span><span>H</span>
+                </div>
+                <div class="coordinates numbers">
+                    <span>8</span><span>7</span><span>6</span><span>5</span><span>4</span><span>3</span><span>2</span><span>1</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="sidebar">
+            <div class="menu-plank mode-selection">
+                <button id="btn-pvp" class="mode-btn selected" onclick="selectMode('pvp')">PLAYER VS PLAYER</button>
+                <button id="btn-pvai" class="mode-btn" onclick="selectMode('pvai')">PLAYER VS AI</button>
+            </div>
+            <div class="menu-plank mt-small">
+                <button id="btn-start" class="start-btn" onclick="startGame()">START GAME</button>
+            </div>
+            
+            <div class="menu-plank mt-small" style="display: flex; gap: 5px;">
+                <button onclick="undoMove()">UNDO</button>
+                <button onclick="redoMove()">REDO</button>
+            </div>
+            <div class="menu-plank mt-small">
+                <button style="background: linear-gradient(to bottom, #d9534f, #991c1c);" onclick="restartGame()">RESTART</button>
+            </div>
+            
+            <div id="timer-w" class="timer-plank mt active-turn">
+                <h3>PLAYER 1 (W)</h3>
+                <div id="white-timer" class="timer-display">10:00</div>
+            </div>
+            <div id="timer-b" class="timer-plank">
+                <h3>PLAYER 2 (B)</h3>
+                <div id="black-timer" class="timer-display">10:00</div>
+            </div>
+            
+            <div id="status-plank">White's Turn</div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
